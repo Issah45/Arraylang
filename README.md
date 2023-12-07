@@ -1,0 +1,2 @@
+# Arraylang
+A weird language
