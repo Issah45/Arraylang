@@ -19,6 +19,8 @@
 `x` Subtracts the current cell to the next cell, emptying the next cell\
 `y` Multiplies the current cell by the next cell, emptying the next cell\
 `z` Divides the current cell by the next cell, emptying the next cell\
+`q` Prints the current cell value\
+`A` Adds a new cell to the array\
 
 ## Issanium Code
 `
