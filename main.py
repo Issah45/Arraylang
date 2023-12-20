@@ -64,6 +64,8 @@ def interprete(what):
 			array[position+1] = array[position]
 			array[position] = 0
 			position += 1
+		if letter == "q":
+			print(array[position])
 		
 		# Math
 		if letter == "\\":
@@ -82,6 +84,8 @@ def interprete(what):
 		if letter == "z":
 			array[position] = round(array[position] / array[position + 1])
 			array[position + 1] = 0
+		if letter == "A":
+			array.append(0)
 		
 		if letter == "%":
 			print("Arraylang Version 0.2")
