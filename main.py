@@ -90,5 +90,4 @@ def interprete(what):
 		if letter == "%":
 			print("Arraylang Version 0.2")
 
-
 interprete(code)
