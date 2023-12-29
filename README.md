@@ -1,4 +1,5 @@
 # Arraylang
+In Arraylang, data is stored on a 16-bit 1 dimensional-stack (although it can be infinite with the `d` function). You can move through the stack and change values.\
 
 ## Commands
 `>` Moves to the next cell\
