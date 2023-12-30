@@ -3,6 +3,8 @@ import sys
 f = sys.argv[1]
 code = open(f, "r").read()
 
+
+
 standard = {
 	1: "a", 2: "b", 3: "c",
 	4: "d", 5: "e", 6: "f",
@@ -22,73 +24,102 @@ standard = {
 	46: "\n"
 }
 
-def interprete(what):
-	array = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-	position = 0
+def interprete(what,
+			   array=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+			   position=0):
+	
+	mode = "code"
+	loop = ""
 	
 	for letter in what:
 		# Array Position
-		if letter == "+":
-			array[position] += 1
-		if letter == "-":
-			array[position] -= 1
-		if letter == "a":
-			array[position] += 20
-		if letter == "b":
-			array[position] += 10
-		if letter == "c":
-			array[position] += 5
+		if mode == "code":
+			if letter == "+":
+				array[position] += 1
+			if letter == "-":
+				array[position] -= 1
+			if letter == "a":
+				array[position] += 20
+			if letter == "b":
+				array[position] += 10
+			if letter == "c":
+				array[position] += 5
+			
+			# Moving The Pointer
+			if letter == ">":
+				position += 1
+			if letter == "<":
+				position -= 1
+			if letter == "*":
+				print(position)
+			if letter == "o":
+				for number in array:
+					print(number, end="")
+			
+			# Displaying Things & Input
+			if letter == "&":
+				print(standard[array[position]], end="")
+			if letter == "i":
+				array[position] = int(input())
+			if letter == "0":
+				if array[position+1] == 0:
+					array[position] = 1
+				else:
+					array[position] = 0
+				array[position+1] = 0
+			if letter == "/":
+				array[position+1] = array[position]
+				array[position] = 0
+				position += 1
+			if letter == "q":
+				print(array[position])
+			
+			# Math
+			if letter == "\\":
+				array.pop(position)
+				position -= 1
+				array.append(0)
+			if letter == "w":
+				array[position] = array[position] + array[position + 1]
+				array[position + 1] = 0
+			if letter == "x":
+				array[position] = array[position] - array[position + 1]
+				array[position + 1] = 0
+			if letter == "y":
+				array[position] = array[position] * array[position + 1]
+				array[position + 1] = 0
+			if letter == "z":
+				array[position] = round(array[position] / array[position + 1])
+				array[position + 1] = 0
+			if letter == "A":
+				array.append(0)
+			
+			if letter == "%":
+				print("Arraylang Version 0.2")
+			
+			if letter == "$":
+				mode = "if"
+			
+			if letter == "(":
+				loop = ""
+				mode = "loop"
 		
-		# Moving The Pointer
-		if letter == ">":
-			position += 1
-		if letter == "<":
-			position -= 1
-		if letter == "*":
-			print(position)
-		if letter == "o":
-			for number in array:
-				print(number, end="")
-		
-		# Displaying Things & Input
-		if letter == "&":
-			print(standard[array[position]], end="")
-		if letter == "i":
-			array[position] = int(input())
-		if letter == "0":
-			if array[position+1] == 0:
+		elif mode == "if":
+			if array[position + 1] == int(letter):
+				array[position + 1] = 0
 				array[position] = 1
 			else:
+				array[position + 1] = 0
 				array[position] = 0
-			array[position+1] = 0
-		if letter == "/":
-			array[position+1] = array[position]
-			array[position] = 0
-			position += 1
-		if letter == "q":
-			print(array[position])
+			mode = "code"
 		
-		# Math
-		if letter == "\\":
-			array.pop(position)
-			position -= 1
-			array.append(0)
-		if letter == "w":
-			array[position] = array[position] + array[position + 1]
-			array[position + 1] = 0
-		if letter == "x":
-			array[position] = array[position] - array[position + 1]
-			array[position + 1] = 0
-		if letter == "y":
-			array[position] = array[position] * array[position + 1]
-			array[position + 1] = 0
-		if letter == "z":
-			array[position] = round(array[position] / array[position + 1])
-			array[position + 1] = 0
-		if letter == "A":
-			array.append(0)
+		elif mode == "loop":
+			if letter == ")":
+				mode = "loop2"
+			loop += letter
 		
-		if letter == "%":
-			print("Arraylang Version 0.2")
+		elif mode == "loop2":
+			for i in range(int(letter)):
+				interprete(loop, array, position)
 
 interprete(code)

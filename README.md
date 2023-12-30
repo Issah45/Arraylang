@@ -1,5 +1,5 @@
 # Arraylang
-In Arraylang, data is stored on a 16-bit 1 dimensional-stack (although it can be infinite with the `d` function). You can move through the stack and change values.\
+In Arraylang, data is stored on a 16-bit 1 dimensional-stack (although it can be infinite with the `d` function). You can move through the stack and change values. Arraylang also has modes, which are used for loops and if statements\
 
 ## Commands
 `>` Moves to the next cell\
@@ -13,7 +13,6 @@ In Arraylang, data is stored on a 16-bit 1 dimensional-stack (although it can be
 `o` Displays the entire array\
 `&` Displays the value of the current cell as a string using Issanium Code\
 `i` Gets an integer input\
-`0` If the cell after the current cell is equal to zero, the current cell will be 1, if not the current cell will be zero, then the cell after the current cell will be set back to zero\
 `/` Moves the value of the current cell to the next cell, emptying the current cell, and moving the pointer to the next cell\
 `\` Empties the current cell\
 `w` Adds the current cell to the next cell, emptying the next cell\
@@ -22,6 +21,8 @@ In Arraylang, data is stored on a 16-bit 1 dimensional-stack (although it can be
 `z` Divides the current cell by the next cell, emptying the next cell\
 `q` Prints the current cell value\
 `d` Adds a new cell to the array\
+`$` If the cell after the current cell is equal to the current cell's value, the current cell will be 1, if not the current cell will be zero, then the cell after the current cell will be set back to zero\
+`()` runs the code inside the brackets for a certain number of times e.g. `(++q)5`
 
 ## Issanium Code
 `
@@ -42,4 +43,3 @@ In Arraylang, data is stored on a 16-bit 1 dimensional-stack (although it can be
 43: "'", 44: "\"", 45: "|",
 46: "\n"
 `
-
