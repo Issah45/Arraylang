@@ -1,9 +1,10 @@
-import sys
+import sys, os
 
 f = sys.argv[1]
 code = open(f, "r").read()
 
-
+array_normal = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+variables = {"version": "0.4"}
 
 standard = {
 	1: "a", 2: "b", 3: "c",
@@ -24,16 +25,13 @@ standard = {
 	46: "\n"
 }
 
-def interprete(what,
-			   array=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-			   position=0):
-	
+def interprete(what, array=array_normal, position=0):
 	mode = "code"
 	loop = ""
 	
 	for letter in what:
-		# Array Position
 		if mode == "code":
+			# Array Position
 			if letter == "+":
 				array[position] += 1
 			if letter == "-":
@@ -52,21 +50,19 @@ def interprete(what,
 				position -= 1
 			if letter == "*":
 				print(position)
+			if letter == "O":
+				for number in array:
+					print(number, end="")
 			if letter == "o":
 				for number in array:
 					print(number, end="")
+				print()
 			
 			# Displaying Things & Input
 			if letter == "&":
 				print(standard[array[position]], end="")
 			if letter == "i":
 				array[position] = int(input())
-			if letter == "0":
-				if array[position+1] == 0:
-					array[position] = 1
-				else:
-					array[position] = 0
-				array[position+1] = 0
 			if letter == "/":
 				array[position+1] = array[position]
 				array[position] = 0
@@ -103,6 +99,17 @@ def interprete(what,
 			if letter == "(":
 				loop = ""
 				mode = "loop"
+
+			if letter == "V":
+				mode = "var_set"
+			if letter == "B":
+				mode = "var_get"
+			if letter == "Q":
+				for v in variables:
+					print(f"{v} = {variables[v]}")
+
+			if letter == "C":
+				os.system("clear")
 		
 		elif mode == "if":
 			if array[position + 1] == int(letter):
@@ -121,5 +128,22 @@ def interprete(what,
 		elif mode == "loop2":
 			for i in range(int(letter)):
 				interprete(loop, array, position)
+
+		elif mode == "var_set":
+			variables[letter] = "N"
+			mode = "var_set_2"
+			l = letter
+
+		elif mode == "var_set_2":
+			if letter == "i":
+				variables[l] = int(input())
+			else:
+				variables[l] = int(letter)
+			mode = "code"
+
+		elif mode == "var_get":
+			n = variables[letter]
+			array[position] = n
+			mode = "code"
 
 interprete(code)
