@@ -50,13 +50,9 @@ def interprete(what, array=array_normal, position=0):
 				position -= 1
 			if letter == "*":
 				print(position)
-			if letter == "O":
-				for number in array:
-					print(number, end="")
 			if letter == "o":
 				for number in array:
 					print(number, end="")
-				print()
 			
 			# Displaying Things & Input
 			if letter == "&":
@@ -90,9 +86,6 @@ def interprete(what, array=array_normal, position=0):
 			if letter == "A":
 				array.append(0)
 			
-			if letter == "%":
-				print("Arraylang Version 0.2")
-			
 			if letter == "$":
 				mode = "if"
 			
@@ -110,6 +103,8 @@ def interprete(what, array=array_normal, position=0):
 
 			if letter == "C":
 				os.system("clear")
+			if letter == "N":
+				print()
 		
 		elif mode == "if":
 			if array[position + 1] == int(letter):

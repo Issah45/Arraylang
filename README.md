@@ -22,24 +22,30 @@ In Arraylang, data is stored on a 16-bit 1 dimensional-stack (although it can be
 `q` Prints the current cell value\
 `d` Adds a new cell to the array\
 `$` If the cell after the current cell is equal to the current cell's value, the current cell will be 1, if not the current cell will be zero, then the cell after the current cell will be set back to zero\
+`A` adds an empty cell to the array
 `()` runs the code inside the brackets for a certain number of times e.g. `(++q)5`
+`V` variable setter e.g. `Va5` means a = 5\
+`B` variable getter e.g. `Ba` sets the current cell to the variable a\
+`Q` prints out all variables and their values\
+`C` clears the screen\
+`N` prints out a new line
 
 ## Issanium Code
 `
-1: "a", 2: "b", 3: "c",
-4: "d", 5: "e", 6: "f",
-7: "g", 8: "h", 9: "i",
-10: "j", 11: "k", 12: "l",
-13: "m", 14: "n", 15: "o",
-16: "p", 17: "q", 18: "r",
-19: "s", 20: "t", 21: "u",
-22: "v", 23: "w", 24: "x",
-25: "y", 26: "z", 27: "1",
-28: "2", 29: "3", 30: "4",
-31: "5", 32: "6", 33: "7",
-34: "8", 35: "9", 36: "0",
-37: " ", 38: ".", 39: ",",
-40: "!", 41: "#", 42: "$",
-43: "'", 44: "\"", 45: "|",
+1: "a", 2: "b", 3: "c",\
+4: "d", 5: "e", 6: "f",\
+7: "g", 8: "h", 9: "i",\
+10: "j", 11: "k", 12: "l",\
+13: "m", 14: "n", 15: "o",\
+16: "p", 17: "q", 18: "r",\
+19: "s", 20: "t", 21: "u",\
+22: "v", 23: "w", 24: "x",\
+25: "y", 26: "z", 27: "1",\
+28: "2", 29: "3", 30: "4",\
+31: "5", 32: "6", 33: "7",\
+34: "8", 35: "9", 36: "0",\
+37: " ", 38: ".", 39: ",",\
+40: "!", 41: "#", 42: "$",\
+43: "'", 44: "\"", 45: "|",\
 46: "\n"
 `
