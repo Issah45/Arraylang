@@ -71,7 +71,7 @@ In Arraylang, data is stored on a 16-bit 1 dimensional-stack (although it can be
 38. .
 39. ,
 40. !
-41. #
+41. hashtag
 42. $
 43. '
 44. "
