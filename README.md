@@ -1,5 +1,5 @@
 # Arraylang
-In Arraylang, data is stored on a 16-bit 1 dimensional-stack (although it can be infinite with the `d` function). You can move through the stack and change values. Arraylang also has modes, which are used for loops and if statements\
+In Arraylang, data is stored on a 16-bit 1 dimensional-stack (although it can be infinite with the `A` function). You can move through the stack and change values. Arraylang also has modes, which are used for loops, if statements, and variables\
 
 ## Commands
 `>` Moves to the next cell\
@@ -31,21 +31,49 @@ In Arraylang, data is stored on a 16-bit 1 dimensional-stack (although it can be
 `N` prints out a new line
 
 ## Issanium Code
-`
-1: "a", 2: "b", 3: "c",\
-4: "d", 5: "e", 6: "f",\
-7: "g", 8: "h", 9: "i",\
-10: "j", 11: "k", 12: "l",\
-13: "m", 14: "n", 15: "o",\
-16: "p", 17: "q", 18: "r",\
-19: "s", 20: "t", 21: "u",\
-22: "v", 23: "w", 24: "x",\
-25: "y", 26: "z", 27: "1",\
-28: "2", 29: "3", 30: "4",\
-31: "5", 32: "6", 33: "7",\
-34: "8", 35: "9", 36: "0",\
-37: " ", 38: ".", 39: ",",\
-40: "!", 41: "#", 42: "$",\
-43: "'", 44: "\"", 45: "|",\
-46: "\n"
-`
+1. a
+2. b
+3. c
+4. d
+5. e
+6. f
+7. g
+8. h
+9. i
+10. j
+11. k
+12. l
+13. m
+14. n
+15. o
+16. p
+17. q
+18. r
+19. s
+20. t
+21. u
+22. v
+23. w
+24. x
+25. y
+26. z
+27. 1
+28. 2
+29. 3
+30. 4
+31. 5
+32. 6
+33. 7
+34. 8
+35. 9
+36. 0
+37.  
+38. .
+39. ,
+40. !
+41. #
+42. $
+43. '
+44. "
+45. |
+46. \n
