@@ -132,6 +132,8 @@ def interprete(what, array=array_normal, position=0):
 		elif mode == "var_set_2":
 			if letter == "i":
 				variables[l] = int(input())
+			elif letter == "?":
+				variables[l] = array[position]
 			else:
 				variables[l] = int(letter)
 			mode = "code"
