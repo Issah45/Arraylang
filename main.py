@@ -22,7 +22,7 @@ standard = {
 	37: " ", 38: ".", 39: ",",
 	40: "!", 41: "#", 42: "$",
 	43: "'", 44: "\"", 45: "|",
-	46: "\n", 47 "H.inev"
+	46: "\n", 47: "H.inev"
 }
 
 def interprete(what, array=array_normal, position=0):
