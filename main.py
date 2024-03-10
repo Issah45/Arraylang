@@ -105,6 +105,11 @@ def interprete(what, array=array_normal, position=0):
 				os.system("clear")
 			if letter == "N":
 				print()
+
+			if letter == "Ω":
+				print("H. inev", end="")
+			if letter == "ω":
+				print("I. So. Grat", end="")
 		
 		elif mode == "if":
 			if array[position + 1] == int(letter):

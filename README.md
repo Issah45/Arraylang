@@ -67,7 +67,7 @@ In Arraylang, data is stored on a 16-bit 1 dimensional-stack (although it can be
 34. 8
 35. 9
 36. 0
-37.  
+37.
 38. .
 39. ,
 40. !
