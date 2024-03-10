@@ -22,8 +22,8 @@ In Arraylang, data is stored on a 16-bit 1 dimensional-stack (although it can be
 `q` Prints the current cell value\
 `d` Adds a new cell to the array\
 `$` If the cell after the current cell is equal to the current cell's value, the current cell will be 1, if not the current cell will be zero, then the cell after the current cell will be set back to zero\
-`A` adds an empty cell to the array
-`()` runs the code inside the brackets for a certain number of times e.g. `(++q)5`
+`A` adds an empty cell to the array\
+`()` runs the code inside the brackets for a certain number of times e.g. `(++q)5`\
 `V` variable setter e.g. `Va5` means a = 5. If it is `Vai`, it will take an input and if it is `Va?`, it will use the current cell as a variable\
 `B` variable getter e.g. `Ba` sets the current cell to the variable a\
 `Q` prints out all variables and their values\
@@ -71,7 +71,7 @@ In Arraylang, data is stored on a 16-bit 1 dimensional-stack (although it can be
 38. .
 39. ,
 40. !
-41. hashtag
+41. `#`
 42. $
 43. '
 44. "
