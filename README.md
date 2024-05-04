@@ -28,7 +28,8 @@ In Arraylang, data is stored on a 16-bit 1 dimensional-stack (although it can be
 `B` variable getter e.g. `Ba` sets the current cell to the variable a\
 `Q` prints out all variables and their values\
 `C` clears the screen\
-`N` prints out a new line
+`N` prints out a new line\
+`"` prints out a string e.g. `"Hello" would print out Hello
 
 ## Issanium Code
 1. a
