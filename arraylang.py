@@ -3,27 +3,8 @@ import sys, os
 f = sys.argv[1]
 code = open(f, "r").read()
 
-array_normal = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-variables = {"version": "0.5.0"}
-
-standard = {
-    1: "a", 2: "b", 3: "c",
-    4: "d", 5: "e", 6: "f",
-    7: "g", 8: "h", 9: "i",
-    10: "j", 11: "k", 12: "l",
-    13: "m", 14: "n", 15: "o",
-    16: "p", 17: "q", 18: "r",
-    19: "s", 20: "t", 21: "u",
-    22: "v", 23: "w", 24: "x",
-    25: "y", 26: "z", 27: "1",
-    28: "2", 29: "3", 30: "4",
-    31: "5", 32: "6", 33: "7",
-    34: "8", 35: "9", 36: "0",
-    37: " ", 38: ".", 39: ",",
-    40: "!", 41: "#", 42: "$",
-    43: "'", 44: "\"", 45: "|",
-    46: "\n"
-}
+array_normal = [0, 0, 0, 0]
+variables = {"version": "0.5.1"}
 
 def interprete(what, array=array_normal, position=0):
     mode = "code"
@@ -81,8 +62,6 @@ def interprete(what, array=array_normal, position=0):
                 array[position] = int(input())
             
             # Output
-            if letter == "&":
-                print(standard[array[position]], end="")
             if letter == "o":
                 for number in array:
                     print(number, end="")

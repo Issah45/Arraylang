@@ -11,7 +11,6 @@ In Arraylang, data is stored on a 16-bit 1 dimensional-stack (although it can be
 `c` Increases the value of the current cell by 5\
 `*` Displays the current cell number\
 `o` Displays the entire array\
-`&` Displays the value of the current cell as a string using Issanium Code\
 `i` Gets an integer input\
 `/` Moves the value of the current cell to the next cell, emptying the current cell, and moving the pointer to the next cell\
 `\` Empties the current cell\
@@ -29,53 +28,4 @@ In Arraylang, data is stored on a 16-bit 1 dimensional-stack (although it can be
 `Q` prints out all variables and their values\
 `C` clears the screen\
 `N` prints out a new line\
-`"` prints out a string e.g. `"Hello" would print out Hello
-
-## Issanium Code
-1. a
-2. b
-3. c
-4. d
-5. e
-6. f
-7. g
-8. h
-9. i
-10. j
-11. k
-12. l
-13. m
-14. n
-15. o
-16. p
-17. q
-18. r
-19. s
-20. t
-21. u
-22. v
-23. w
-24. x
-25. y
-26. z
-27. 1
-28. 2
-29. 3
-30. 4
-31. 5
-32. 6
-33. 7
-34. 8
-35. 9
-36. 0
-37.
-38. .
-39. ,
-40. !
-41. `#`
-42. $
-43. '
-44. "
-45. |
-46. \n
-47. H. inev
+`"` prints out a string e.g. `"Hello"` would print out Hello\
