@@ -4,7 +4,7 @@ f = sys.argv[1]
 code = open(f, "r").read()
 
 array_normal = [0, 0, 0, 0]
-variables = {"version": "0.5.1"}
+variables = {}
 
 def interprete(what, array=array_normal, position=0):
     mode = "code"
