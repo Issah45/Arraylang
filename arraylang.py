@@ -1,9 +1,10 @@
-import sys, os
+
+import sys, os, tkinter
 
 f = sys.argv[1]
 code = open(f, "r").read()
 
-array_normal = [0, 0, 0, 0]
+array_normal = [0, 0, 0, 0, 0, 0, 0, 0]
 variables = {}
 
 def interprete(what, array=array_normal, position=0):
@@ -37,9 +38,10 @@ def interprete(what, array=array_normal, position=0):
                 position += 1
             
             if letter == "\\":
-                array.pop(position)
+                array[position-1] = array[position]
+                array[position] = 0
                 position -= 1
-                array.append(0)
+
             if letter == "w":
                 array[position] = array[position] + array[position + 1]
                 array[position + 1] = 0
@@ -73,11 +75,6 @@ def interprete(what, array=array_normal, position=0):
             
             if letter == "N":
                 print()
-
-            if letter == "Я":
-                print("H. inev", end="")
-            if letter == "я":
-                print("I. So. Grat", end="")
             
             if letter == "Q":
                 for v in variables:
@@ -101,8 +98,13 @@ def interprete(what, array=array_normal, position=0):
                 mode = "string"
             
             # Others
-            if letter == "C":
-                os.system("clear")
+            if letter == "0":
+                array[position] = 0
+            
+            # Graphics
+            if letter == "{":
+                mode = "alert"
+                q = ""
         
         # Modes
         elif mode == "if":
@@ -147,5 +149,16 @@ def interprete(what, array=array_normal, position=0):
             n = variables[letter]
             array[position] = n
             mode = "code"
+        
+        elif mode == "alert":
+            if letter == "}":
+                r = tkinter.Tk()
+                txt = tkinter.Label(r, text=q)
+                txt.pack()
+                r.mainloop()
+                mode = "code"
+            else:
+                q += letter
+
 
 interprete(code)

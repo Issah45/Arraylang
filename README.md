@@ -1,5 +1,5 @@
-# Arraylang
-In Arraylang, data is stored on a 16-bit 1 dimensional-stack (although it can be infinite with the `A` function). You can move through the stack and change values. Arraylang also has modes, which are used for loops, if statements, and variables\
+# New Arraylang
+In New Arraylang, data is stored on a 16-bit 1 dimensional-stack (although it can be infinite with the `A` function). You can move through the stack and change values. Arraylang also has modes, which are used for loops, if statements, and variables\
 
 ## Commands
 `>` Moves to the next cell\
@@ -23,9 +23,9 @@ In Arraylang, data is stored on a 16-bit 1 dimensional-stack (although it can be
 `$` If the cell after the current cell is equal to the current cell's value, the current cell will be 1, if not the current cell will be zero, then the cell after the current cell will be set back to zero\
 `A` adds an empty cell to the array\
 `()` runs the code inside the brackets for a certain number of times e.g. `(++q)5`\
-`V` variable setter e.g. `Va5` means a = 5. If it is `Vai`, it will take an input and if it is `Va?`, it will use the current cell as a variable\
+`V` variable setter e.g. `Va5` means a = 5. If it is `Vai`, it will take an input and if it is `Va?`, then it will use the current cell as a variable\
 `B` variable getter e.g. `Ba` sets the current cell to the variable a\
 `Q` prints out all variables and their values\
-`C` clears the screen\
 `N` prints out a new line\
 `"` prints out a string e.g. `"Hello"` would print out Hello\
+`{}` uses Tkinter to show an alert e.g. `{hello}` would make an alert saying hello\
