@@ -4,7 +4,7 @@ import sys, os, tkinter
 f = sys.argv[1]
 code = open(f, "r").read()
 
-array_normal = [0, 0, 0, 0, 0, 0, 0, 0]
+array_normal = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 variables = {}
 
 def interprete(what, array=array_normal, position=0):
@@ -92,6 +92,8 @@ def interprete(what, array=array_normal, position=0):
                 mode = "var_set"
             if letter == "B":
                 mode = "var_get"
+            if letter == "R":
+                mode = "var_delete"
             
             if letter == '"':
                 string = ""
@@ -148,6 +150,10 @@ def interprete(what, array=array_normal, position=0):
         elif mode == "var_get":
             n = variables[letter]
             array[position] = n
+            mode = "code"
+
+        elif mode == "var_delete":
+            variables.pop(letter)
             mode = "code"
         
         elif mode == "alert":
