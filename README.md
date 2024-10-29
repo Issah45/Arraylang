@@ -1,5 +1,5 @@
-# New Arraylang
-In New Arraylang, data is stored on a 16-bit 1 dimensional-stack (although it can be infinite with the `A` function). You can move through the stack and change values. Arraylang also has modes, which are used for loops, if statements, and variables\
+# Arraylang
+In Arraylang, data is stored on a 16-bit 1 dimensional-stack (although it can be infinite with the `A` function). You can move through the stack and change values. Arraylang also has modes, which are used for loops, if statements, and variables\
 
 ## Commands
 `>` Moves to the next cell\
