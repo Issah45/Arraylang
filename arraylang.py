@@ -66,7 +66,7 @@ def interprete(what, array=array_normal, position=0):
             # Output
             if letter == "o":
                 for number in array:
-                    print(number, end="")
+                    print(number, end="|")
             
             if letter == "*":
                 print(position)
